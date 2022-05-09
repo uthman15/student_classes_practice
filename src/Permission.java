@@ -12,6 +12,10 @@ public class Permission {
      If the age is more than 20, then it will do nothing
      */
 
+    public static void checkAge(int age){
+        if (age <= 20) throw new RuntimeException(age + " is not allowed!");
+    }
+
 
 
     /*
@@ -22,4 +26,10 @@ public class Permission {
     In case the className is not Math or Science, then method will throw an RuntimeException with message "{className} is not allowed!"
     If the className is Math or Science, then it will do nothing
      */
+
+    public static void checkClassName(String ms){
+        if (!ms.equalsIgnoreCase("Math") && !ms.equalsIgnoreCase("Science")){
+            throw new RuntimeException(ms + " is not allowed!");
+        }
+    }
 }
